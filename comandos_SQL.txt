@@ -26,6 +26,8 @@ CREATE TABLE VENDAS(
 	CONSTRAINT fk_venda_veiculo FOREIGN KEY (ID_VEICULO) REFERENCES VEICULO(ID_VEICULO),
 	CONSTRAINT fk_venda_cliente FOREIGN KEY (ID_CLIENTE) REFERENCES CLIENTE(ID_CLIENTE)
 );
+
+
 /* cria as sequences */
 
 CREATE SEQUENCE seq_id_cliente;
@@ -80,4 +82,40 @@ INSERT INTO VEICULO(
 	seq_id_veiculo.nextval,
 	67000,
 	2015
+);
+
+INSERT INTO VENDAS(
+	ID_VENDA,
+	ID_VEICULO,
+	ID_CLIENTE,
+	DT_COMPRA,
+	DT_VENDA,
+	VL_VENDA,
+	VL_COMPRA
+) VALUES (
+	seq_id_vendas.nextval,
+	2,
+	5,
+	to_date('05/03/2017', 'DD/MM/YYYY'),
+	to_date('12/05/2017', 'DD/MM/YYYY'),
+	78590,
+	72800
+);
+
+INSERT INTO VENDAS(
+	ID_VENDA,
+	ID_VEICULO,
+	ID_CLIENTE,
+	DT_COMPRA,
+	DT_VENDA,
+	VL_VENDA,
+	VL_COMPRA
+) VALUES (
+	seq_id_vendas.nextval,
+	1,
+	4,
+	to_date('31/12/2016', 'DD/MM/YYYY'),
+	to_date('27/04/2017', 'DD/MM/YYYY'),
+	29990,
+	45000
 );
