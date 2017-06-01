@@ -1,3 +1,4 @@
+/* COMANDO PARA RETORNAR A VENDA E NOME DO CLIENTE (RELACIONAMENTO) */
 select v.dt_compra, v.dt_venda, c.nm_cliente, v.vl_venda, v.vl_compra,
 (v.vl_venda - v.vl_compra) as resultado_da_venda
 from vendas v, cliente c
