@@ -3,3 +3,10 @@ select v.dt_compra, v.dt_venda, c.nm_cliente, v.vl_venda, v.vl_compra,
 (v.vl_venda - v.vl_compra) as resultado_da_venda
 from vendas v, cliente c
 where c.id_cliente = v.id_cliente
+
+
+/* RETORNAR TODOS OS CLIENTES COM NOME CONTENDO A LETRA "A" */
+select * 
+from cliente
+where NM_CLIENTE like '%T%'
+
